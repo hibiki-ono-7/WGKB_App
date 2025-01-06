@@ -15,6 +15,13 @@ def main() -> None:
     st.title('Custom Circos Plot Generator with Gene Metadata Integration')
     st.markdown("###### Created by Adam Hetherwick, Hibiki Ono, Nitin Kanchi, and Dr. Paulo Zaini")
 
+    # Feedback button
+    st.sidebar.markdown("### Feedback & Suggestions")
+    if st.sidebar.button("Report Feedback"):
+        feedback_url = "https://docs.google.com/forms/d/e/1FAIpQLSc_PnUobRzr_UXhUo_tJB2HTe4m-qJONoN1K1oPMFgTatUsqA/viewform?usp=header"
+        st.markdown(f"[Click here to report feedback or issues!]({feedback_url})")
+        st.stop()
+
     # Allow user to select which species they would like to visualize
     species_selection = st.selectbox('Select the genome you would like to visualize', ['Juglans regia', 'Juglans microcarpa x Juglans regia', 'Other'])
     
